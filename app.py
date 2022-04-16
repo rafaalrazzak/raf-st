@@ -22,10 +22,5 @@ rekapAbsen = st.title('Rekap Absen')
 
 if (submitted):
 	st.subheader("Absen Tanggal", tanggal.strftime("%d %B, %Y"))
-        dataRekap = {
-         "Nama": namaSiswa,
-         "Keterangan": keterangan
-         }
-
-
-st.table(dataRekap)
+        dataRekap = {"Nama": namaSiswa, "Keterangan": keterangan}
+        st.table(dataRekap)
