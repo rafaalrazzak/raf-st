@@ -21,12 +21,11 @@ submitted = form.form_submit_button("Submit")
 rekapAbsen = st.title('Rekap Absen')
 
 if (submitted):
-	for i in namaSiswa:
-		data = {"tanggal": {tanggal.strftime("%d %B, %Y"): {i:keterangan}}}
+	st.subheader("Absen Tanggal", tanggal.strftime("%d %B, %Y"))
+        dataRekap = {
+         "Nama": namaSiswa,
+         "Keterangan": keterangan
+         }
 
-dataRekap = {
- "Nama": namaSiswa,
- "Keterangan": keterangan
-}
-st.subheader("Absen Tanggal", tanggal)
+
 st.table(dataRekap)
