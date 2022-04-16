@@ -28,4 +28,5 @@ dataRekap = {
  "Nama": namaSiswa,
  "Keterangan": keterangan
 }
+st.subheader("Absen Tanggal", tanggal)
 st.table(dataRekap)
