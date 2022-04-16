@@ -18,11 +18,6 @@ keterangan = form.radio("keterangan",
                         ('Hadir', 'Sakit', 'Izin', 'Tanpa Keterangan'))
 submitted = form.form_submit_button("Submit")
 rekapAbsen = st.title('Rekap Absen')
-		
-for i in namaSiswa:
-	data = {"tanggal": {tanggal.strftime("%d %B, %Y"): {i: keterangan}}}
-	for k, v in data["tanggal"].items():
-		
 
 if (submitted):
 	for i in namaSiswa:
