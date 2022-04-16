@@ -15,11 +15,20 @@ namaSiswa = form.multiselect("Absensi",
 keterangan = form.radio("keterangan",
                         ('Hadir', 'Sakit', 'Izin', 'Tanpa Keterangan'))
 submitted = form.form_submit_button("Submit")
-data = {"tanggal":{tanggal.strftime("%d %B, %Y"): {"Siswa": namaSiswa, "Ket": keterangan}}}
-print(data)
+rekapAbsen = st.title('Rekap Absen')
+		
+for i in namaSiswa:
+	data = {"tanggal": {tanggal.strftime("%d %B, %Y"): {i: keterangan}}}
+	for k, v in data["tanggal"].items():
+		st.write("Absen Tanggal :", k)
+		st.write(v)
+
 if (submitted):
-	data["tanggal"]:{tanggal:{"Siswa":namaSiswa,"Ket":keterangan}}}
-for k,v in data["tanggal"].items():
-	rekapAbsen = st.title('Rekap Absen')
-	st.write("Absen Tanggal :", k)
-	st.table(v)
+	for i in namaSiswa:
+		data = {"tanggal": {tanggal.strftime("%d %B, %Y"): {i:keterangan}}}
+
+dataRekap = {
+ "Nama": namaSiswa,
+  "Keterangan": keterangan
+}
+st.table(dataRekap)
