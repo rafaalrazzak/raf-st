@@ -5,6 +5,8 @@ from data import siswa
 ##definition
 now = date.today()
 ##data
+
+st.set_page_config(page_title="<raf />", page_icon=logo, layout="centered", initial_sidebar_state="auto", menu_items=None)
 st.title("Absen Aplication")
 st.header("X TKJ 3")
 form = st.form(key="my_form")
@@ -20,8 +22,7 @@ rekapAbsen = st.title('Rekap Absen')
 for i in namaSiswa:
 	data = {"tanggal": {tanggal.strftime("%d %B, %Y"): {i: keterangan}}}
 	for k, v in data["tanggal"].items():
-		st.write("Absen Tanggal :", k)
-		st.write(v)
+		
 
 if (submitted):
 	for i in namaSiswa:
