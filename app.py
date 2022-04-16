@@ -4,7 +4,7 @@ from datetime import date
 from data import siswa
 ##definition
 now = date.today()
-logo=https://raw.githubusercontent.com/raf-ar/raf-st/a4c5cb39868a9a6d0953e95aa60264a9eb7cf908/public/img/ambigram-v4.png
+logo="https://raw.githubusercontent.com/raf-ar/raf-st/a4c5cb39868a9a6d0953e95aa60264a9eb7cf908/public/img/ambigram-v4.png"
 ##data
 
 st.set_page_config(page_title="<raf />", page_icon=logo, layout="centered", initial_sidebar_state="auto", menu_items=None)
