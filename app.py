@@ -23,7 +23,7 @@ st.title("Absen Aplication")
 st.header("X TKJ 3")
 form = st.form(key="my_form")
 tanggal = form.date_input("Tanggal", now)
-namaSiswa = form.multiselect("Absensi",
+namaSiswa = form.radio("Absensi",
                              options=siswa.nama,
                              help="tentukan untuk siapa")
 keterangan = form.radio("Keterangan",
@@ -34,9 +34,9 @@ rekapAbsen = st.title('Rekap Absen')
 if (submitted):
     dataRekap = [{
         "Tanggal": tanggal, 
-        "Siswa": {
+        "Siswa": [{
         "Nama": namaSiswa, "Keterangan": keterangan
-        }
+        }]
     }]
     st.subheader(tanggal.strftime("%d %b, %Y"))
     st.write(dataRekap[0])
