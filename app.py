@@ -7,8 +7,8 @@ now = date.today()
 logo = "https://raw.githubusercontent.com/raf-ar/raf-st/a4c5cb39868a9a6d0953e95aa60264a9eb7cf908/public/img/ambigram-v4.png"
 
 dataRekapRaw = [{
-    "Tanggal": ""
-    "Siswa":[{
+    "Tanggal": "",
+    "Siswa": [{
         "Nama": ""
         "Keterangan": ""
     }]
