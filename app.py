@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 import streamlit as st
 import pandas as pd
 from datetime import date
@@ -33,13 +32,11 @@ submitted = form.form_submit_button("Submit")
 rekapAbsen = st.title('Rekap Absen')
 
 if (submitted):
-    if(len (namaSiswa) != 0  or keterangan != NULL):
-        dataRekap = {"data": {
-            "Tanggal": tanggal, "Siswa": {
-                "Nama": namaSiswa, "Keterangan": keterangan
-            }
-        }}
-        st.subheader(tanggal.strftime("%d %b, %Y"))
-        st.subheader("Nama: ")
-        st.write(listToString(dataRekap["data"]["Siswa"]["Nama"]), ":",
-                 dataRekap["data"]["Siswa"]["Keterangan"])
+    dataRekap = ["data": {
+        "Tanggal": tanggal, 
+        "Siswa": {
+        "Nama": namaSiswa, "Keterangan": keterangan
+        }
+    }]
+    st.subheader(tanggal.strftime("%d %b, %Y"))
+    st.write(dataRekap[0])
