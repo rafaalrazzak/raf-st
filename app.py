@@ -39,12 +39,12 @@ submitted = form.form_submit_button("Submit")
 rekapAbsen = st.title('Rekap Absen')
 
 if (submitted):
-    dataRekap.apeend([{
+    dataRekap.apeend({
         "Tanggal": tanggal, 
         "Siswa": [{
             "Nama": namaSiswa,
             "Keterangan": keterangan
         }]
-    }])
+    })
     st.subheader(tanggal.strftime("%d %b, %Y"))
     st.write(dataRekap)
