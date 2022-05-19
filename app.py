@@ -9,7 +9,7 @@ logo = "https://raw.githubusercontent.com/raf-ar/raf-st/a4c5cb39868a9a6d0953e95a
 dataRekapRaw = [{
     "Tanggal": "",
     "Siswa": [{
-        "Nama": ""
+        "Nama": "",
         "Keterangan": ""
     }]
 }]
