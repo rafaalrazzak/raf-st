@@ -6,7 +6,7 @@ from data import siswa
 now = date.today()
 logo = "https://raw.githubusercontent.com/raf-ar/raf-st/a4c5cb39868a9a6d0953e95aa60264a9eb7cf908/public/img/ambigram-v4.png"
 
-dataRekapRaw = [{
+dataRekap = [{
     "Tanggal": "",
     "Siswa": [{
         "Nama": "",
@@ -39,12 +39,12 @@ submitted = form.form_submit_button("Submit")
 rekapAbsen = st.title('Rekap Absen')
 
 if (submitted):
-    dataRekapNew = dataRekap[{
+    dataRekap.apeend([{
         "Tanggal": tanggal, 
         "Siswa": [{
             "Nama": namaSiswa,
             "Keterangan": keterangan
         }]
-    }]
+    }])
     st.subheader(tanggal.strftime("%d %b, %Y"))
     st.write(dataRekap)
