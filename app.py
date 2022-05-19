@@ -32,7 +32,7 @@ submitted = form.form_submit_button("Submit")
 rekapAbsen = st.title('Rekap Absen')
 
 if (submitted):
-    dataRekap = ["data": {
+    dataRekap = [{
         "Tanggal": tanggal, 
         "Siswa": {
         "Nama": namaSiswa, "Keterangan": keterangan
